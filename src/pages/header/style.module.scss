@@ -1,0 +1,51 @@
+@import '../../assets/styles/variables.module';
+
+// header styles
+.header{
+display: flex;
+justify-content: space-between;
+padding-top:10px ;
+border-bottom: 1px solid $flameLight;
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    .item{
+        &.logo{
+            font-family:"Rubik" ;
+            font-weight: bolder;
+            color: $flame;
+            font-size: 32px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 18px;
+        font-weight: normal;
+        svg{
+            fill: $flame;
+        }
+    }
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .lang,
+    .currency{
+        svg{
+            width: 10px;
+            fill: $flame
+        }
+        position: relative;
+        cursor: pointer;
+    }
+    .info svg{
+        fill: $flame;
+    }
+}
+}
