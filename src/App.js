@@ -1,16 +1,19 @@
 
-import React from 'react';
+import React, {useContext} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './assets/styles/index.scss'
 import { Header } from './pages/header';
+import { observer } from 'mobx-react-lite';
+import { Context } from '.';
 
-function App() {
+export const App = observer(()=> {
+  const {cook} = useContext(Context);
+console.log('cook observer', cook.selectedLang)
   return (
     <div className="App">
      <Header />
     </div>
   );
-}
+})
 
-export default App;
