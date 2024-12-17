@@ -1,0 +1,9 @@
+@mixin verticalLine($top: 5px){
+    content:'';
+    top: $top;
+    position: absolute;
+    height: 20px;
+    width: 3px;
+    border-radius: 3px;
+    background-color: $flameLight;
+}
