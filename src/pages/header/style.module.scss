@@ -41,10 +41,6 @@ svg{
             border-radius: 4px;
             background-color: $flameLight;
         }
-    
-        &:nth-last-child(1){
-            margin-left: 20px;
-        }
     }
 }
 .section{
@@ -90,7 +86,7 @@ svg{
 
 }
 
-// response
+// response media
 
 @media screen and ( max-width: 1440px){
 .header{

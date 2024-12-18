@@ -15,6 +15,12 @@ export default class CookStore {
         {id:4, name: 'GBP'},
         {id:5, name: 'CHF'}
         ]
+        this._statistics  = [
+            {id: 1, text: 'Talented Chefs', data: 100},
+            {id: 2, text: 'Students', data: 1000},
+            {id: 3, text: 'Rating', data: 4.8},
+            {id: 4, text: 'Cooking Categories', data: 20}
+        ]
         this._selectedLang = 'Eng'
         this._selectedCurr = 'USD'
         makeAutoObservable(this)
@@ -26,6 +32,9 @@ export default class CookStore {
     }
     setCurrency(currency) {
         this._currency = currency
+    }
+    setStatistics(statistics) {
+        this._statistics = statistics
     }
     setSelectedLang(lang) {
         this._selectedLang = lang
@@ -44,6 +53,9 @@ export default class CookStore {
 
     get language() {
         return this._languages
+    }
+    get statistics() {
+        return this._statistics
     }
     get selectedLang() {
         return this._selectedLang
