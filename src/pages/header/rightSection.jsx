@@ -64,9 +64,7 @@ import { Context } from '../..';
       <Button className={classNames(mainStyle.btnFill)}
                 onClick={e=>handleLogin}>
         Log In <IconLogout/>
-      </Button>
-      
-     
+      </Button>     
     </div>
   )
 })
