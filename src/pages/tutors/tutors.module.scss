@@ -1,0 +1,89 @@
+@import '../../assets/styles/variables.module';
+.tutorsComponent{
+.mainTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 40px 0;
+    .text{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 20px;
+        .icon{
+            padding-top: 20px;
+        }
+        .content{
+            .header{
+                font-size: 61px;
+                font-weight: 700;
+            }
+           
+           
+        }
+    }
+    .search{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        input{
+             border: 1px solid transparent !important
+            }   
+    }
+}
+}
+.tutorsList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    .card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        gap: 20px;
+        padding: 20px 30px;
+        border-radius: 16px;
+        border: 1px solid $flame;
+        font-family: 'Rubik';
+        min-width: 30%;
+        .icon{
+            svg, svg path{
+                fill: $flame;
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                svg{
+                    width: 24px;
+                    height: 24px;
+                }
+                font-size: 24px;
+                font-weight: 800;
+            }
+            .description{
+                font: 300 16px 'Outfit'
+            }
+        }
+        &.active{
+            background-color: $flame;
+            svg, 
+            svg path{
+                fill: $white;
+            }
+            .text,
+            .description{
+                fill: $white;
+                color: $white;
+            }
+        }
+    }
+}

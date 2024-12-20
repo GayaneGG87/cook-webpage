@@ -21,6 +21,14 @@ export default class CookStore {
             {id: 3, text: 'Rating', data: 4.8},
             {id: 4, text: 'Cooking Categories', data: 20}
         ]
+        this._tutors = [
+            {id: 1, title: 'Bakery' , description: 'Master baking: from rustic breads to delicate pastries'},
+            {id: 2, title: 'Vegan Cooking' , description: 'Create delicious, nutritious meals with plant-based ingredients'},
+            {id: 3, title: 'Sea Food Mastery' , description: 'Dive into seafood: from grilling fish to creating sushi'},
+            {id: 4, title: 'BBQ & Grilling' , description: 'Fire up your skills with mouth-watering BBQ dishes'},
+            {id: 5, title: 'Wine Pairing' , description: 'Enhance culinary experiences by mastering wine pairing'},
+            {id: 6, title: 'Cake Decorating' , description: 'Unleash creativity with cake decorating techniques'},
+        ]
         this._selectedLang = 'Eng'
         this._selectedCurr = 'USD'
         makeAutoObservable(this)
@@ -36,6 +44,9 @@ export default class CookStore {
     setStatistics(statistics) {
         this._statistics = statistics
     }
+    setStatistics(tutors) {
+        this._tutors = tutors
+    }
     setSelectedLang(lang) {
         this._selectedLang = lang
     }
@@ -50,12 +61,14 @@ export default class CookStore {
         return this._currency
     }
 
-
     get language() {
         return this._languages
     }
     get statistics() {
         return this._statistics
+    }
+    get tutors() {
+        return this._tutors
     }
     get selectedLang() {
         return this._selectedLang

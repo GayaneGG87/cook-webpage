@@ -9,17 +9,18 @@ import { Context } from '.';
 import { BigBanner } from './pages/banner';
 import {BrowserRouter} from 'react-router-dom'
 import { StatisticComponent } from './pages/statistics';
+import { TutorsComponent, TutorsList } from './pages/tutors';
 
 
 export const App = observer(()=> {
   const {cook} = useContext(Context);
-console.log('cook observer', cook.selectedLang)
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
         <BigBanner />
         <StatisticComponent />
+        <TutorsComponent />
       </div>
     </BrowserRouter>
   );
