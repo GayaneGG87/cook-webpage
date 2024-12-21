@@ -1,0 +1,82 @@
+@import '../../assets/styles/index.scss';
+
+// header styles
+.header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top:10px ;
+border-bottom: 1px solid $flameLight;
+svg{
+    fill: $flame;
+}
+//navbar styles
+
+.navbar{
+    @include flex-box(20px);
+    align-items: center;
+      div:first-of-type > a{
+        font: bolder 32px 'Rubik';
+        color: $flame;
+        position: relative;
+        margin-right: 20px;
+          &:nth-of-type(1)::before{
+            right: -20px;
+            @include vertical-line(10px);
+        }
+     }
+    
+}
+
+// header rightSide section   styles
+
+.section{
+    @include flex-box(20px);
+    justify-content: center;
+    align-items: center;
+    font: 400 18px 'OutFit';
+    .lang,
+    .currency{
+        svg{
+            width: 10px;
+            margin-left: 5px;
+            &.show{
+                transition:transform 300ms;
+                transform: rotate(-45deg);
+            }
+        }
+        position: relative;
+        cursor: pointer;
+    }
+    .info {
+        position: relative;
+        padding: 0 20px;
+        &::before{
+            left: 0;
+            @include vertical-line();
+        }
+        &::after{
+            right: 0;
+            @include vertical-line();
+        }
+
+        }
+        
+}
+.menuBar {
+    display: none;
+    width: 40px;
+    path{
+    fill: $flame;
+}
+}
+
+}
+
+// response media
+
+@media screen and ( max-width: $tablet){
+}
+@media screen and (max-width: $mobile){
+   
+}

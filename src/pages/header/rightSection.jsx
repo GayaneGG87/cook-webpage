@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import classNames from "classnames";
-import style from './style.module.scss';
+import style from './header.module.scss';
 import mainStyle  from './../../assets/styles/_classes.module.scss';
 import { Button } from '../../components/common/button/button';
 import IconDown from '../../assets/icons/iconDown';
@@ -19,13 +18,11 @@ import { Context } from '../..';
   const [openLang, setOpenLang] = useState(false)
   const [openCurr, setOpenCurr] = useState(false)
 
-  useEffect(()=>{
-  },[])
-
   const handleClick = (value)=>{
     openLang && cook.setSelectedLang(value.name);
     openCurr && cook.setSelectedCurr(value.name)
   }
+
   const handleOpenMenu = (type)=>{
     if(type==='lang'){
       setOpenLang(!openLang)
@@ -34,36 +31,37 @@ import { Context } from '../..';
       setOpenCurr(!openCurr)
       openLang && setOpenLang(false)
     }
-
   }
-  const handleLogin = () => {
 
-  }
   return (
-    <div className={classNames(style.section)}>
-      <div className={classNames(style.lang)}
+    <div className={style.section}>
+      <div className={style.lang}
             onClick={e=>handleOpenMenu('lang')}>
-              {selectedLang} 
-              <IconDown className={classNames(openLang ? style.show : '')} />
-                {openLang &&  
-                <Menu list={langList} 
-                      handleClick={handleClick}
-                      title="Select a Language"/>
-              } </div>
-      <div className={classNames(style.currency)}
+            {selectedLang} 
+            <IconDown 
+            className={openLang ? style.show : ''} />
+            {openLang &&  
+            <Menu list={langList} 
+                  handleClick={handleClick}
+                  title="Select a Language"
+              />} 
+            </div>
+      <div className={style.currency}
             onClick={e=>handleOpenMenu('curr')}>
-              {selectedCurr} 
-              <IconDown className={classNames(openCurr ? style.show : '')} />
-                {openCurr &&  
-                <Menu list={currList} 
-                      handleClick={handleClick}
-                      title="Select a Currency" />
-               }</div>
-       <div className={classNames(style.info)}>
-        <IconInfo/></div>
-      <Button className={classNames(mainStyle.btnFill)}
-                onClick={e=>handleLogin}>
-        Log In <IconLogout/>
+            {selectedCurr} 
+            <IconDown className={openCurr ? style.show : ''} />
+            {openCurr &&  
+            <Menu list={currList} 
+                  handleClick={handleClick}
+                  title="Select a Currency"
+            />}
+        </div>
+       <div className={style.info}>
+            <IconInfo/>
+        </div>
+      <Button className={mainStyle.btnFill}>
+        Log In 
+      <IconLogout/>
       </Button>     
     </div>
   )

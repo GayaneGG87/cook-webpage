@@ -1,0 +1,6 @@
+@import '../../assets/styles/mixins.module';
+
+.content{
+    @include flex-box(10px);
+    align-items: center;
+}

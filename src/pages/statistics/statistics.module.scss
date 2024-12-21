@@ -1,31 +1,24 @@
-@import '../../assets/styles/variables.module';
+@import '../../assets/styles/index.scss';
 
 .statistics{
-    display: flex;
+    @include flex-box(10px);
     justify-content: space-around;
     align-items: center;
+    height: 150px;
     border: 1px solid $flame;
     background-color: $flameLighter;
     border-radius: 16px;
     padding:5px 10px;
     margin: 40px 170px;
-    gap: 10px;
     position: relative;
     z-index: 2;
-    height: 150px;
     .card{
-        display: flex;
-        flex-direction: column;
+        @include flex-box(10px, column);
         align-items: center;
         padding: 20px;
-        gap: 10px;
         .data{
             font: bolder 40px 'Rubik';
             color: $flame
-
-        }
-        .text{
-            font: 16px 'Outfit'
         }
     }
 }

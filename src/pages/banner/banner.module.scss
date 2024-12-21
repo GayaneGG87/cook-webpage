@@ -1,46 +1,29 @@
-@import '../../assets/styles/variables.module';
-@import '../../assets/styles/fonts.module';
+@import '../../assets/styles/index.scss';
 
 .banner{
     display: flex;
     gap: 10px;
     .textSection{
-        display: flex;
-        flex-direction: column;
+        @include flex-box(20px, column);
         justify-content: space-between;
         align-items: start;
         flex: 1;
-        gap: 20px;
     }
         h1{
             max-width: 60%;
             text-align: start;      
-            font: 700 61px 'Rubik';
-            letter-spacing: -2px;
             span{
                 color: $flame;
                 font: italic 61px/65px 'Pacifico' !important;
             }
         }
         p{
-            display: flex;
             align-items: start;
             max-width: 60%;
-            font: 16px/23px 'Outfit';
         }
-        a{
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: $black;
-            cursor: pointer;
-            font: 600 20px 'Outfit';
-            gap: 10px;
-        }
+    
     .btnGroup{
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
+        @include flex-box(20px)
     }
     .img{
         display: flex;

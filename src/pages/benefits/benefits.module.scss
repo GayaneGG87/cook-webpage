@@ -1,0 +1,61 @@
+@import '../../assets/styles/index.scss';
+
+.benefits{
+    @include flex-box(40px, column, center);
+    section>div{
+        @include flex-box(10px, column, center);
+
+    }
+}
+.benefitsList{
+    @include flex-box(110px, row, start);
+    justify-content: space-between;
+    padding: 40px 0;
+    .item{
+        @include flex-box(20px, column, center);
+        justify-content: center;
+        section{
+            padding: 20px 0;
+         div{
+            @include flex-box(20px, column, center);
+            h3{
+                font-size: 2em;
+            }
+            p{
+                text-align: center;
+                font-weight: 300;
+                line-height: 1.5em;
+            }
+        }
+        
+        }
+        .cyrcle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: $flame;
+            svg{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &:nth-last-of-type(2){
+            position: relative;
+            &::after{
+                left: -60px;
+                @include vertical-line(120px);
+                height: 42px;
+            }
+            &::before{
+                right: -60px;
+                @include vertical-line(120px);
+                height: 42px;
+            }
+        }
+
+    }
+   
+}

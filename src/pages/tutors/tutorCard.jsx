@@ -22,13 +22,13 @@ export const TutorCard = (props) => {
     <div
      className={classNames(style.card, active ? style.active : '')}
      onClick={e=>props.handleClick(item.id)}>
-        <div className={classNames(style.icon)}>
+        <div className={style.icon}>
         {icons.map((icon, i)=> i+1 == item.id && icon)}
         </div>
-        <div className={classNames(style.text)}>
-            <p className={classNames(style.title)}>
+        <div className={style.text}>
+            <p className={style.title}>
                 {item.title} {active ? <IconFire /> : <IconArrow /> }</p>
-            <p className={classNames(style.description)}>{item.description}</p>
+            <p>{item.description}</p>
         </div>
     </div>
   )

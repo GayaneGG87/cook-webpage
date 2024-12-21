@@ -1,4 +1,4 @@
-@mixin verticalLine($top: 5px){
+@mixin vertical-line($top: 5px){
     content:'';
     top: $top;
     position: absolute;
@@ -7,3 +7,15 @@
     border-radius: 3px;
     background-color: $flameLight;
 }
+@mixin flex-box($gap:20px, $dir: row, $align:baseline){
+    display: flex;
+    flex-direction: $dir;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin header-style($size){
+    font: 700 $size 'Rubik';
+    color: black;
+}
+

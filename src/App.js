@@ -10,6 +10,7 @@ import { BigBanner } from './pages/banner';
 import {BrowserRouter} from 'react-router-dom'
 import { StatisticComponent } from './pages/statistics';
 import { TutorsComponent, TutorsList } from './pages/tutors';
+import { Benefits } from './pages/benefits/index';
 
 
 export const App = observer(()=> {
@@ -21,6 +22,7 @@ export const App = observer(()=> {
         <BigBanner />
         <StatisticComponent />
         <TutorsComponent />
+        <Benefits />
       </div>
     </BrowserRouter>
   );

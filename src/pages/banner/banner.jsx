@@ -2,14 +2,15 @@ import React from 'react'
 import classNames from "classnames";
 import style from './banner.module.scss';
 import mainStyle  from './../../assets/styles/_classes.module.scss';
-import { NavLink } from 'react-router-dom';
 import { Button } from '../../components/common/button/button';
 import IconVideo from '../../assets/icons/iconVideo'
+import { SmallContent } from '../../components/smallContent/smallContent';
+
 export const Banner = () => {
   return (
     <section className={classNames(style.banner, mainStyle.container)}>
-        <div className={classNames(style.textSection)}>
-        <h1 className={classNames(style.title)}>
+        <div className={style.textSection}>
+        <h1>
         Master the Art of Cooking with 
         <span> Experts </span> 
         Worldwide 
@@ -23,15 +24,18 @@ export const Banner = () => {
            learning, and teaching becomes a 
            shared passion.
         </p>
-        <NavLink to={'/'}>
-            <IconVideo /> Learn more in the Cook vidoe</NavLink>
-        <div className={classNames(style.btnGroup)}>
-            <Button className={classNames(mainStyle.btnFill)}>Find Your Tutor</Button>
-            <Button className={classNames(mainStyle.btnSecondary)}>Join Our Chefs</Button>
-
+        <SmallContent
+        type={'link'}
+        icon={<IconVideo />}
+        text='Learn more in the Cook vidoe'
+        side='left'
+         />
+        <div className={style.btnGroup}>
+            <Button className={mainStyle.btnFill}>Find Your Tutor</Button>
+            <Button className={mainStyle.btnSecondary}>Join Our Chefs</Button>
         </div>
         </div>
-        <div className={classNames(style.img)}></div>
+        <div className={style.img}></div>
     </section>
   )
 }

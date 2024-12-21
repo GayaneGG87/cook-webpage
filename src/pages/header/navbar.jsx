@@ -1,18 +1,29 @@
 import React from 'react'
-import classNames from "classnames";
-import style from './style.module.scss'
+import style from './header.module.scss'
 import IconCook from '../../assets/icons/iconCook'
 import IconPan from '../../assets/icons/iconPan'
 import IconTomato from '../../assets/icons/iconTomato'
+import { SmallContent } from '../../components/smallContent/smallContent';
 
 
 export const Navbar = () => {
+  const list = [
+    {id: 1, icon:'' , text : 'COOK'},
+    {id: 2, icon: <IconCook />, text : 'Cooking Classes'},
+    {id: 3, icon: <IconPan />, text : 'Become a Chef' },
+    {id: 4, icon: <IconTomato />, text : 'Group Cooking'},
+  ]
   return (
-    <nav className={classNames(style.navbar)}>
-        <div className={classNames(style.item, style.logo)}>COOK</div>
-        <div className={classNames(style.item)}> <IconCook />Cooking Classes</div>
-        <div className={classNames(style.item)}><IconPan /> Become a Chef</div>
-        <div className={classNames(style.item)}><IconTomato /> Group Cooking</div>
+    <nav className={style.navbar}>
+        { list.map((item, key)=>
+            < SmallContent 
+            key={key}
+            icon={item.icon}
+            text={item.text}
+            side={'left'}
+            type={'link'}
+            />
+        )}
     </nav>
   )
 }

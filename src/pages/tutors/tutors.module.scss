@@ -1,49 +1,28 @@
-@import '../../assets/styles/variables.module';
+@import '../../assets/styles/index.scss';
+
 .tutorsComponent{
 .mainTitle{
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: baseline;
     margin: 40px 0;
-    .text{
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        gap: 20px;
-        .icon{
-            padding-top: 20px;
-        }
-        .content{
-            .header{
-                font-size: 61px;
-                font-weight: 700;
-            }
-           
-           
-        }
-    }
-    .search{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding-top: 10px;
-        input{
-             border: 1px solid transparent !important
-            }   
-    }
+ 
+}
+.more{
+    @include flex-box();
+    justify-content: flex-end;
+    margin: 40px 0;
 }
 }
 .tutorsList{
-    display: flex;
+    @include flex-box(20px);
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
     .card{
-        display: flex;
+        @include flex-box(20px);
         align-items: center;
         justify-content: space-between;
         flex: 1;
-        gap: 20px;
         padding: 20px 30px;
         border-radius: 16px;
         border: 1px solid $flame;
@@ -55,9 +34,7 @@
             }
         }
         .text{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            @include flex-box(10px, column, none);
             .title{
                 display: flex;
                 justify-content: space-between;
@@ -69,9 +46,6 @@
                 font-size: 24px;
                 font-weight: 800;
             }
-            .description{
-                font: 300 16px 'Outfit'
-            }
         }
         &.active{
             background-color: $flame;
@@ -80,7 +54,7 @@
                 fill: $white;
             }
             .text,
-            .description{
+            p{
                 fill: $white;
                 color: $white;
             }
