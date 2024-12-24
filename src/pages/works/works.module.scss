@@ -1,0 +1,22 @@
+@import '../../assets/styles/index.scss';
+
+.works{
+    .mainTitle{
+        @include flex-box(40px);
+        justify-content: space-between;
+        margin: 40px 0;
+        section{
+            @include flex-box(20px, row, start)
+        }
+     
+    }
+    .list{
+    @include flex-box(60px, column);
+   > section:nth-of-type(2){
+        >div:first-of-type{
+            order: 2;
+        }
+    }
+    }
+   
+}

@@ -1,0 +1,25 @@
+
+@import '../../assets/styles/index.scss';
+
+section{
+@include flex-box(120px, row, start);
+.img{
+    border-radius: 20px;
+    display: flex;
+    flex: 1;
+    img{
+        display: flex;
+        flex: 1;
+        width: 100%;
+    }   
+}
+.dataContent{
+    h3{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    border-radius: 20px;
+    @include flex-box(20px, column, start);
+    flex: 1;
+}
+}

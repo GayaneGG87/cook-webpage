@@ -6,6 +6,9 @@
     justify-content: space-between;
     align-items: baseline;
     margin: 40px 0;
+    section{
+        @include flex-box(20px, row, start)
+    }
  
 }
 .more{

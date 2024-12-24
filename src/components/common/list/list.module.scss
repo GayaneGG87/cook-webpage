@@ -1,0 +1,12 @@
+@import '../../../assets/styles/index.scss';
+
+.listWrapper{
+    .title{
+        color: $white
+    }
+    .link{
+        a{
+            color: $flameLight
+        }
+    }
+}

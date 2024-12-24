@@ -1,0 +1,59 @@
+
+@import '../../assets//styles/index.scss';
+
+.advantages{
+    @include flex-box(120px, row, unset);
+    .img{
+        display: flex;
+        flex: 1;
+        border-radius: 32px;
+        background: url('../../assets/images/levelUp.png') no-repeat center / cover;
+        position: relative;
+        .levelUp{
+            @include flex-box(20px, column, end);
+            background-color: $flame;
+            padding: 20px;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            position: absolute;
+            bottom: -20px;
+            left: -40px;
+            width: 280px;
+            div{
+                font: 700 24px 'Outfit';
+                color: white;
+            }
+            p{
+                text-align: end;
+                color: white
+            }
+
+        }
+    }
+    .list{
+        @include flex-box(20px, column);
+        flex:1;
+        .item{
+            @include flex-box(20px, column);
+            section{
+                div{
+                    @include flex-box(10px, column);
+
+                }
+                @include flex-box(10px, row, start);
+                border-radius: 16px;
+                border: 1px solid $flame;
+                padding: 10px;
+                h3{
+                    font-size: 24px;
+                }
+                svg{
+                    min-width: 32px;
+                    max-width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+ 
+    }
+}

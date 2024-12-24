@@ -19,14 +19,25 @@
     border: 2px solid $flame;
     color: $flame;
 }
+.btnBordered{
+    background-color: $flame;
+    border: 2px solid $white;
+    color: $white;
+}
 .btnFill{
     background-color: $flame;
     color:$white;
-    border: unset;
+    border: 2px solid $flame;
     svg{
         fill:$white;
         padding-left: 5px;
     }
+}
+.badge{
+    background-color: $flameLighter;
+    color: $flame;
+    border-radius: 30px;
+    border: 1px solid $flame;
 }
 .headerText{
 font: bold 50px 'Rubik';

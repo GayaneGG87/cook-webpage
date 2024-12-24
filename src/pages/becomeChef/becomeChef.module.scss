@@ -1,0 +1,20 @@
+@import '../../assets/styles/index.scss';
+
+.becomeChef{
+    section{
+        >div:first-of-type{
+            order: 2
+        }
+        svg{
+            min-width: 24px;
+        }
+        ul{
+            @include flex-box(10px, column);
+            li{
+                @include flex-box(10px, row, baseline);
+
+            }
+        }
+    }
+   
+}

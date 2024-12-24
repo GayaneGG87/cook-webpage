@@ -9,8 +9,15 @@ import { Context } from '.';
 import { BigBanner } from './pages/banner';
 import {BrowserRouter} from 'react-router-dom'
 import { StatisticComponent } from './pages/statistics';
-import { TutorsComponent, TutorsList } from './pages/tutors';
+import { TutorsComponent } from './pages/tutors';
 import { Benefits } from './pages/benefits/index';
+import { Advantages } from './pages/advatages';
+import { WorksComponent } from './pages/works/index';
+import { Info } from './pages/info/info';
+import { BecomeChef } from './pages/becomeChef/becomeChef';
+import { BecomeStudent } from './pages/becomeStudent/becomeStudent';
+import { Popular } from './pages/popular/popular';
+import { Footer } from './pages/footer/footer';
 
 
 export const App = observer(()=> {
@@ -23,6 +30,13 @@ export const App = observer(()=> {
         <StatisticComponent />
         <TutorsComponent />
         <Benefits />
+        <Advantages />
+        <WorksComponent/>
+        <Info />
+        <BecomeChef />
+        <BecomeStudent/>
+        <Popular />
+        <Footer />
       </div>
     </BrowserRouter>
   );

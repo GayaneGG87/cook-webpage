@@ -1,0 +1,28 @@
+@import '../../assets/styles/index.scss';
+
+.popular{
+    display: flex;
+    .wrapper{
+        flex: 1;
+       .article{
+            .list{
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+       } 
+    }
+    .blogsContent{
+        @include flex-box(20px, column);
+        flex: 1;
+        .blogsList{
+            @include flex-box(20px, row);
+            flex-wrap: wrap;
+            >div{
+                flex: 1;
+                flex-wrap: wrap;
+                flex-basis: 200px;
+            }
+        }
+    }
+}

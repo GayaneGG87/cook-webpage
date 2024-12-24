@@ -1,0 +1,35 @@
+@import '../../assets/styles/index.scss';
+
+.footer{
+    @include flex-box(20px, column);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: $flame;
+    margin: 40px;
+    padding: 20px;
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    hr{
+        border: 1px  solid $flameLighter !important;
+        padding:0 20px;
+        width: 100%;
+        background-color: $flameLighter;
+    }
+    .top,.bottom{
+        @include flex-box(20px, row);
+        align-self: stretch;
+.logo{
+            display: flex;
+               flex: 2; 
+        }
+        ul{
+            @include flex-box(20px, column);
+            flex: 1;
+        }
+    }
+    
+
+}

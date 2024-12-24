@@ -1,0 +1,32 @@
+@import '../../assets/styles/index.scss';
+
+.info{
+    @include flex-box(0px);
+    position: relative;
+   
+    section{
+        @include flex-box(20pc, column, center);
+        background-color: $flameLighter;
+        border-radius: 16px;
+        border: 1px solid $flame;
+        margin: 20px auto;
+        width: 35%;
+        text-align: center  ;
+        padding: 60px 20px 20px 20px;
+        position: relative;
+        svg{
+            width: 115px;
+            height: 119px;
+            position: absolute;
+            top: -70px;
+        }
+    }
+    .line{
+        height: 1px;
+        width: 100%;
+        border: 1px solid $flame;
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+    }
+}
